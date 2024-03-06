@@ -28,6 +28,9 @@ export default {
   },
   methods: {
     ...mapActions(useCounterStore, ['increase', 'decrease', 'changeName', '$reset'])
+  },
+  mounted () {
+    console.log({ optionAPI: useCounterStore().changeState })
   }
 }
 </script>

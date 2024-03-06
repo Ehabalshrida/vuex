@@ -8,6 +8,9 @@ export const useCounterStore = defineStore('counter', {
   getters: {
     increaseCount () {
       return this.count + 1
+    },
+    changeState () {
+      return { ...this.$state, id: 1 }
     }
   },
   actions: {
@@ -20,6 +23,5 @@ export const useCounterStore = defineStore('counter', {
     changeName (name) {
       this.name = name
     }
-
   }
 })
